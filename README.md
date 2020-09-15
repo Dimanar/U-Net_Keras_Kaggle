@@ -1,7 +1,7 @@
 # U-Net_Keras_Kaggle
 Semantic segmentation with UNet architecture using Keras.  
-[![Image](data/result_1.png)]  
-[![Image](data/result_2.png)]  
+[![Image](Resources/result_1.png)]  
+[![Image](Resources/result_2.png)]  
 
 # Using
 1. Firstly create folder, open it in IDE or text editor and clone reposytory (or download zip) 
