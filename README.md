@@ -1,7 +1,7 @@
 # U-Net_Keras_Kaggle
 Semantic segmentation with UNet architecture using Keras.  
-[![Image](Resources/result_1.png)]  
-[![Image](Resources/result_2.png)]  
+[![Image](Resource/result_1.png)]  
+[![Image](Resource/result_2.png)]  
 
 # Using
 1. Firstly create folder, open it in IDE or text editor and clone reposytory (or download zip) 
@@ -11,10 +11,13 @@ Semantic segmentation with UNet architecture using Keras.
 3. Run file predict_mask.py ( it will load the model, pedict, write to the DataFrame and save with encoded_pixels)
 > python predict_mask.py
 
-# Techniques
-First of all, about preprocessing:   
-    1. Resize  
-    2. From RGB to GRAY  
-    3. Normalization with "shift" - (x/255 * 0.99) + 0.01  
-My task was the segmentation and i have to use U-Net architecture. There is a folder in the repository where 4 files are stored: 2 of them store a retrained model with 35 million parameters, the second model with regularization for 2 million parameters. For the best score, I used the lighter model.
-After prediction, the model encodes the images and saves them to a file along with metrics for each image.
+# DATA overiview 
+Dataset contains a large number of nuclei images and mask. All dataset split into two type of folders: (image, mask) in train folder. The test folder contain only nuclei images and .cvs file, which contain: ImageId, encoded pixels, Height, Width. All images can be divided intp several unique dimensions. For example:  
+[![Image](Resource/1shape.png)][![Image](Resource/1_shape.png)]  
+[![Image](Resource/2shape.png)][![Image](Resource/2_shape.png)]  
+[![Image](Resource/3shape.png)][![Image](Resource/3_shape.png)] 
+
+Next step, I checked dimension of images. I noticed that images have different shapes. The most frequent image dimension in train and test set is (256, 256, 3). I made decision to resize all images and their masks to shape (256, 256, 1) - zero because I will change scale from RGB tp GRAY.  
+
+[![Image](Resource/sizes.png)]
+
