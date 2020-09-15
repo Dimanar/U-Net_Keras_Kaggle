@@ -45,7 +45,7 @@ The dice coefficient is a statistic used to gauge the similarity of two samples.
 ![Image](Resources/metric.png)  
 
 ## Model history
-Unfortunately I do not habe a good computing server or as least a normal computer, so i use only 10 epochs.
+Unfortunately I do not have enough resources to made computations fast, so i use only 10 epochs.
 ![Image](output/dice_coef.png)   
 ![Image](output/dice_coef_loss.png)  
 
