@@ -38,7 +38,7 @@ On assignment, I needed to use the UNet architecture. UNet architecture was a gr
 [![Image](Resources/unet.png)]  
 
 ## Loss function
-Combine binary cross entropy loss and dice coefficient.
+1 - metric 
 
 ## Metric
 The dice coefficient is a statistic used to gauge the similarity of two samples.  
